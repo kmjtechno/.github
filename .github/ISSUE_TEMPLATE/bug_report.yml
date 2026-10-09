@@ -1,0 +1,35 @@
+name: Bug report
+description: Report a reproducible software problem (never disclose secrets).
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "For vulnerabilities, use the repository's private Security reporting flow. Do not include credentials or customer data."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the actual and expected results.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Minimal reproducible steps using sanitized test data.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "e.g. v0.3.1 or commit SHA"
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics (optional)
+      description: Remove identifiers, tokens, private network addresses and secrets.
+    validations:
+      required: false
